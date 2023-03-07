@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Info</title>
+</head>
+<body>
+    {% for m in messages %}
+        {{m}}<br/>
+    {% endfor %}
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>course</th>
+        </tr>
+        {% for d in d4 %}
+            <tr size="12px">
+                {% for l in d %}
+                    <td>{{ l }}</td>
+                {% endfor %}
+{#            <td>{{ d.sid }}</td>#}
+{#            <td>{{ d.name }}</td>#}
+{#            <td>{{ d.course_name }}</td>#}
+            </tr>
+        {% endfor %}
+    </table>
+
+    {{ d1 }} <br/>
+    {{ d2 }} <br/>
+    {{ d3 }} <br/>
+    {{ d5 }} <br/>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <form action="register" method="post">
+        {% csrf_token %}
+        Enter the first name: <input type="text" name="first_name" placeholder="Django"><br>
+        Enter the last name: <input type="text" name="last_name" placeholder="framework"><br>
+        Enter the unique username: <input type="text" name="username" placeholder="Djangoframework"><br>
+        Enter the email: <input type="email" name="email" placeholder="Django@gmaol.com"><br>
+        Enter the password: <input type="text" name="password1" placeholder="password"><br>
+        Re-enter the password: <input type="text" name="password2" placeholder="confirm password"><br>
+        <input type="submit">
+    </form>
+    <div>
+        {% for message in messages %}
+        <h2>{{ message }}</h2>
+        {% endfor %}
+    </div>
+</body>
+</html>
